@@ -35,7 +35,7 @@ def flying_objects_config():
 
   cfg.NUM_CLASS = len(cfg.CLASSES)    # number of classes
 
-  cfg.GPU = 1                 # GPU ID
+  cfg.GPU = 0                 # GPU ID
   cfg.DROPOUT_PROB = 0.5      # Probability to keep a node in dropout
   cfg.IMAGE_WIDTH = 128       # image width
   cfg.IMAGE_HEIGHT = 128      # image height
