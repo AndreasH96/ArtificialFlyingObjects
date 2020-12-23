@@ -198,13 +198,13 @@ def generate_lastframepredictor_batches(data_folder, image_shape, batch_size):
             # initializing the arrays, x_train and y_train
             x_train = []  
             y_train = []
-
+            image_lables = []
             for i in current_batch:
 
                 image_file = sequence_list[i][0]
                 last_image = lastFrame_list[i]
                 #print(image_files)
-                #print(last_image)
+                image_lables.append(last_image.split("_")[2])
                 image = Image.open(image_file)
                 
                 image = image.resize((image_shape[0], image_shape[1]))
@@ -222,7 +222,7 @@ def generate_lastframepredictor_batches(data_folder, image_shape, batch_size):
             batch_images = batch_images.astype('float32') / 255
             batch_lables = batch_lables.astype('float32') / 255
 
-            yield (batch_images, batch_lables)
+            yield (batch_images, batch_lables,image_lables)
 
 def generate_futureframepredictor_batches(data_folder, image_shape, sequence_length, batch_size):
 
