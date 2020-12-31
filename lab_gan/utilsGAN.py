@@ -204,7 +204,7 @@ def generate_lastframepredictor_batches(data_folder, image_shape, batch_size):
                 image_file = sequence_list[i][0]
                 last_image = lastFrame_list[i]
                 #print(image_files)
-                image_lables.append(last_image.split("_")[2])
+                image_lables.append(last_image.split("_")[2] + '_' + last_image.split("_")[3])
                 image = Image.open(image_file)
                 
                 image = image.resize((image_shape[0], image_shape[1]))

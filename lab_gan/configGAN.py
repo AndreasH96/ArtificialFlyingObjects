@@ -23,5 +23,17 @@ def flying_objects_config():
   cfg.SAVE_EVERY = 1         # save after each epoch
   cfg.DEBUG_MODE = True      # print log to console in debug mode
   cfg.DATA_AUGMENTATION = True   # Whether to do data augmentation
-
+  cfg.CLASSES = [
+          'square_red',
+          'square_green',
+          'square_blue',
+          'square_yellow',
+          'triangle_red',
+          'triangle_green',
+          'triangle_blue',
+          'triangle_yellow',
+          'circular_red',
+          'circular_green',
+          'circular_blue',
+          'circular_yellow']
   return cfg
